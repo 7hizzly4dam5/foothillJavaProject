@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class ContactList
+{
+	ArrayList<Contact> contactList = new ArrayList<Contact>();
+	
+	/** This method creates a contact and adds it to the arraylist.
+	 * 
+	 */
+	public void addContact(String first, String last, String street, String city, String zip, String state, String email, String phone, String notes)
+	{
+		;
+	}
+	
+	/** This method prints all contacts to the console.
+	 *
+	 */
+	public void printContactList()
+	{
+		;
+	}
+}
