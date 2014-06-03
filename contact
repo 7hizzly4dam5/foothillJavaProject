@@ -1,0 +1,96 @@
+public class Contact
+{
+	String first;
+	String last;
+	String street;
+	String city;
+	String zip;
+	String state;
+	String email;
+	String phone;
+	String notes;
+	
+	/** 
+	 * 
+	 */
+	public String getFirst()
+	{
+		return first;
+	}
+	
+	public void setFirst(String string)
+	{
+		first = string;
+	}
+	
+	public String getLast()
+	{
+		return last;
+	}
+	
+	public void setLast(String string)
+	{
+		last = string;
+	}
+	public String getStreet()
+	{
+		return street;
+	}
+	
+	public void setStreet(String string)
+	{
+		street = string;
+	}
+	public String getCity()
+	{
+		return city;
+	}
+	
+	public void setCity(String string)
+	{
+		city = string;
+	}
+	public String getZip()
+	{
+		return zip;
+	}
+	
+	public void setZip(String string)
+	{
+		zip = string;
+	}
+	public String getState()
+	{
+		return state;
+	}
+	
+	public void setState(String string)
+	{
+		state = string;
+	}
+	
+	public String getEmail()
+	{
+		return email;
+	}
+	
+	public void setPhone(String string)
+	{
+		phone = string;
+	}
+	
+	public String getPhone()
+	{
+		return phone;
+	}
+	
+	public void setNotes(String string)
+	{
+		notes = string;
+	}
+	
+	public String getNotes()
+	{
+		return notes;
+	}
+}
