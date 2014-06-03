@@ -1,0 +1,16 @@
+public class TesterCaseOneSkeleton
+{
+   public static void main(String[] args)
+   {
+      CaseOneSkeleton personOne = new CaseOneSkeleton();
+      
+      personOne.setFirst();
+      personOne.setLast();
+      personOne.setMail();
+      personOne.setAddress();
+      personOne.setNotes();           
+      personOne.setPhone();
+      
+      System.out.println(personOne.toString());
+   }
+}
