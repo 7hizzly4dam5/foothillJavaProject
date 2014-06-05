@@ -28,4 +28,52 @@ public class ContactList
 	 * This method finds a list of contacts for a given zipcode.
 	 */
 	public ArrayList<Contact> FindByZipCode(String zip_code) { return new ArrayList<Contact>(); }
+	
+	public void addContact(Contact newContact)
+	{
+	   /**
+	   * Parameters: Contact
+	   * Action: adds the contact to the contact list
+	   */
+	}
+	
+	public void printContactList()
+	{
+		/**
+		 * This method prints the entire contact list
+		 */
+	}
+	
+	public void emailAccess(String emailAddress)
+	{
+	   /**
+	    * This method accepts an email address as an argument, searches the
+	    * calling ContactList for any matching emails, and then prints any
+	    * Contacts that match the given criteria.
+	    * Parameters: email address (data member of contact)
+	    * Actions: Prints all matching Contacts from the ContactList
+	    */
+	}
+	
+	public void lastAccess(String lastName)
+	{
+	   /**
+	    * This method accepts a last name as an argument, searches the
+	    * calling ContactList for any matching last names, and then prints any
+	    * Contacts that match the given criteria.
+	    * Parameters: last name (data member of contact)
+	    * Actions: Prints all matching Contacts from the ContactList
+	    */
+	}
+	
+	public void zipAccess(String zipCode)
+	{
+	   /**
+	    * This method accepts a zip code as as an argument, searches the
+	    * calling ContactList for any matching zip codes, and then prints any
+	    * Contacts that match the given criteria.
+	    * Parameters: zip code (data member of contact)
+	    * Actions: Prints all matching Contacts from the ContactList
+	    */
+	}
 }
