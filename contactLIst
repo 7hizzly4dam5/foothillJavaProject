@@ -43,4 +43,11 @@ public class ContactList
 	{
 		;
 	}
+	
+	
+	/**
+	 * This method takes a user input string as a parameter, and then compares
+	 * it to the correct dat member of each contact in the list.  Added by TB.
+	public int compareTo(String userIn)
+	{
 }
