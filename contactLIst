@@ -4,19 +4,28 @@ public class ContactList
 {
 	ArrayList<Contact> contactList = new ArrayList<Contact>();
 	
-	/** This method creates a contact and adds it to the arraylist.
-	 * 
+	/**
+	 * This method adds the given contact to the arraylist.
 	 */
-	public void addContact(String first, String last, String street, String city, String zip, String state, String email, String phone, String notes)
-	{
-		;
-	}
+	public void addContact(Contact contact) { }
 	
-	/** This method prints all contacts to the console.
-	 *
+	/** 
+	 * This method prints all contacts to the console.
 	 */
-	public void printContactList()
-	{
-		;
-	}
+	public void printContactList() { }
+	
+	/** 
+	 * This method finds a contact by their last name.  Added by EP
+	 */
+	public Contact FindByLastName(String last) { return new Contact(); }
+	
+	/** 
+	 * This method finds a contact by their e-mail address.  Added by EP
+	 */
+	public Contact FindByEmail(String email) { return new Contact(); }
+	
+	/** 
+	 * This method finds a list of contacts for a given zipcode.
+	 */
+	public ArrayList<Contact> FindByZipCode(String zip_code) { return new ArrayList<Contact>(); }
 }
