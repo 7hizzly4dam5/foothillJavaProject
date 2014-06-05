@@ -24,9 +24,7 @@ public class ContactList
 	 * This method finds and prints all contacts with a given last name.  Added by EP
 	 */
 	public void findByLastName(String last)
-	{
-		;
-	}
+	{}
 	
 	/** 
 	 * This method finds and prints all contacts with a given e-mail address.  Added by EP
