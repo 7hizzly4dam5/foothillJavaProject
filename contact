@@ -1,3 +1,11 @@
+/** 
+ * A representation of a contact with fields for each piece of information and getters/setters for each field.
+ * 
+ */
+/** 
+ * EP made changes to 
+ *
+ */
 public class Contact
 {
 	String first;
@@ -10,17 +18,14 @@ public class Contact
 	String phone;
 	String notes;
 	
-	/** 
-	 * 
-	 */
 	public String getFirst()
 	{
 		return first;
 	}
 	
-	public void setFirst(String string)
+	public void setFirst(String _first)
 	{
-		first = string;
+		first = _first;
 	}
 	
 	public String getLast()
@@ -28,45 +33,45 @@ public class Contact
 		return last;
 	}
 	
-	public void setLast(String string)
+	public void setLast(String _last)
 	{
-		last = string;
+		last = _last;
 	}
 	public String getStreet()
 	{
 		return street;
 	}
 	
-	public void setStreet(String string)
+	public void setStreet(String _street)
 	{
-		street = string;
+		street = _street;
 	}
 	public String getCity()
 	{
 		return city;
 	}
 	
-	public void setCity(String string)
+	public void setCity(String _city)
 	{
-		city = string;
+		city = _city;
 	}
 	public String getZip()
 	{
 		return zip;
 	}
 	
-	public void setZip(String string)
+	public void setZip(String _zip)
 	{
-		zip = string;
+		zip = _zip;
 	}
 	public String getState()
 	{
 		return state;
 	}
 	
-	public void setState(String string)
+	public void setState(String _state)
 	{
-		state = string;
+		state = _state;
 	}
 	
 	public String getEmail()
@@ -74,9 +79,9 @@ public class Contact
 		return email;
 	}
 	
-	public void setPhone(String string)
+	public void setEmail(String _email)   //added by EP
 	{
-		phone = string;
+		email = _email;
 	}
 	
 	public String getPhone()
@@ -84,13 +89,20 @@ public class Contact
 		return phone;
 	}
 	
-	public void setNotes(String string)
+	public void setPhone(String _phone)
 	{
-		notes = string;
+		phone = _phone;
 	}
 	
 	public String getNotes()
 	{
 		return notes;
 	}
+	
+	public void setNotes(String _notes)
+	{
+		notes = _notes;
+	}
+	
 }
+
