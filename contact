@@ -8,8 +8,8 @@
  */
 public class Contact
 {
-	String first;
-	String last;
+	String firstName;
+	String lastName;
 	String street;
 	String city;
 	String zip;
@@ -20,22 +20,22 @@ public class Contact
 	
 	public String getFirst()
 	{
-		return first;
+		return firstName;
 	}
 	
 	public void setFirst(String string)
 	{
-		first = string;
+		firstName = string;
 	}
 	
 	public String getLast()
 	{
-		return last;
+		return lastName;
 	}
 	
 	public void setLast(String string)
 	{
-		last = string;
+		lastName = string;
 	}
 	
 	public String getStreet()
