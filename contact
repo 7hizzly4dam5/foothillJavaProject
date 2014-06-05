@@ -18,24 +18,24 @@ public class Contact
 	String phone;
 	String notes;
 	
-	public String getFirst()
+	public String getFirstName()
 	{
 		return firstName;
 	}
 	
-	public void setFirst(String string)
+	public void setFirstName(String newFirstName)
 	{
-		firstName = string;
+		firstName = newFirst;
 	}
 	
-	public String getLast()
+	public String getLastName()
 	{
 		return lastName;
 	}
 	
-	public void setLast(String string)
+	public void setLast(String newLastName)
 	{
-		lastName = string;
+		lastName = newLastName;
 	}
 	
 	public String getStreet()
@@ -43,9 +43,9 @@ public class Contact
 		return street;
 	}
 	
-	public void setStreet(String string)
+	public void setStreet(String newStreet)
 	{
-		street = string;
+		street = newStreet;
 	}
 	
 	public String getCity()
@@ -53,9 +53,9 @@ public class Contact
 		return city;
 	}
 	
-	public void setCity(String string)
+	public void setCity(String newCity)
 	{
-		city = string;
+		city = newCity;
 	}
 	
 	public String getZip()
@@ -63,9 +63,9 @@ public class Contact
 		return zip;
 	}
 	
-	public void setZip(String string)
+	public void setZip(String newZip)
 	{
-		zip = string;
+		zip = newZip;
 	}
 	
 	public String getState()
@@ -73,9 +73,9 @@ public class Contact
 		return state;
 	}
 	
-	public void setState(String string)
+	public void setState(String newState)
 	{
-		state = string;
+		state = newState;
 	}
 	
 	public String getEmail()
@@ -83,9 +83,9 @@ public class Contact
 		return email;
 	}
 	
-	public void setEmail(String string)   //added by EP
+	public void setEmail(String newEmail)   //added by EP
 	{
-		email = string;
+		email = newEmail;
 	}
 	
 	public String getPhone()
@@ -93,9 +93,9 @@ public class Contact
 		return phone;
 	}
 	
-	public void setPhone(String string)
+	public void setPhone(String newPhone)
 	{
-		phone = string;
+		phone = newPhone;
 	}
 	
 	public String getNotes()
@@ -103,9 +103,9 @@ public class Contact
 		return notes;
 	}
 	
-	public void setNotes(String string)
+	public void setNotes(String newNotes)
 	{
-		notes = string;
+		notes = newNotes;
 	}
 }
 
