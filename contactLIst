@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class ContactList
 {
@@ -44,12 +44,12 @@ public class ContactList
 		;
 	}
 	
-	
 	/**
 	 * This method takes a user input string as a parameter, and then compares
 	 * it to the correct data member of each contact in the list.  Added by TB.
 	 * Parameter: String
 	 * Return: 1,0, or -1
+	 */
 	public int compareTo(String userIn)
 	{
 		;
