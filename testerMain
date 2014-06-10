@@ -2,16 +2,21 @@ public class TesterCaseOneSkeleton
 {
    public static void main(String[] args)
    {
+      ContactList listOne = new ContactList();
       Contact personOne = new Contact();
       
-      personOne.setFirstName();
-      personOne.setLastName();
-      personOne.setEmail();
-      personOne.setStreet();
-      personOne.setZip();
-      personOne.setState();
-      personOne.setPhone();
-      personOne.setNotes();
+      personOne.setFirstName("Albert");
+      personOne.setLastName("Einstein");
+      personOne.setEmail("eequalsmcsquared@physics.com");
+      personOne.setStreet("1955 Eighteen April St");
+      personOne.setState("New Jersey");
+      personOne.setCity("Princeton");
+      personOne.setZip("01905");
+      personOne.setPhone("0299792458");
+      personOne.setNotes("Above average intelligence");
+      
+      listOne.addContact(personOne);
+      
       
       System.out.println(personOne.toString());
    }
