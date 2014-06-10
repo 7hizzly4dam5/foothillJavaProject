@@ -16,8 +16,12 @@ public class TesterCaseOneSkeleton
       personOne.setNotes("Above average intelligence");
       
       listOne.addContact(personOne);
-      
+      listOne.printContactList();
+      listOne.findByLastName("Einstein");
+      listOne.findByEmail("eequalsmcsquared@physics.com");
+      listOne.findByZipCode("01905");
       
       System.out.println(personOne.toString());
+      System.out.println(listOne.toString());
    }
 }
