@@ -2,7 +2,7 @@ import java.util.*;
 
 public class ContactList
 {
-	ArrayList<Contact> contactList = new ArrayList<Contact>();
+	private ArrayList<Contact> contactList = new ArrayList<Contact>();
 	
 	/**
 	 * This method adds the given contact to the arraylist.
@@ -51,6 +51,15 @@ public class ContactList
 	 * Parameter: String
 	 * Return: 1,0, or -1
 	public int compareTo(String userIn)
+	{
+		;
+	}
+	
+	/**
+	* This method converts the member variables of ContactList into a string readable by
+	* the user as a list of all Contacts listed in this instance.
+	*/
+	public String toString()
 	{
 		;
 	}
