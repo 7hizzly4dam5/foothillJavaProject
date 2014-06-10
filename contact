@@ -159,7 +159,8 @@ public class Contact
 	}
 	
 	/**
-	* Converts the instance of Contact into a string readable by the user as an address.
+	* Converts the instance of Contact into a string readable by the user as a summary of information about
+	* the specific contact.
 	*/
 	public String toString()
 	{
