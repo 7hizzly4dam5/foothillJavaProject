@@ -2,10 +2,6 @@
  * A representation of a contact with fields for each piece of information and getters/setters for each field.
  * 
  */
-/** 
- * EP made changes to 
- *
- */
 public class Contact
 {
 	private String firstName;
@@ -160,5 +156,13 @@ public class Contact
 	public void setNotes(String newNotes)
 	{
 		notes = newNotes;
+	}
+	
+	/**
+	* Converts the instance of Contact into a string readable by the user as an address.
+	*/
+	public String toString()
+	{
+		;
 	}
 }
