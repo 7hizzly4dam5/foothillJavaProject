@@ -1,4 +1,4 @@
-public class TesterCaseOneSkeleton
+public class ContactProgram
 {
    public static void main(String[] args)
    {
