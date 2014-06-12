@@ -1,0 +1,96 @@
+public class Contact
+{
+ 
+   private String first;
+   private String last;
+   private String street;
+   private String city;
+   private String zip;
+   private String state;
+   private String state;
+   private String email;
+   private String phone;
+   private String notes;
+	
+	 public void read()
+	 {
+	    /** 
+	    * This method prompts the user to input information for the 
+      * calling Contact object, whic is then written to each data
+	    * data member of that Contact
+	    * Parameters: none
+	    * Action: Prompts the user to input information for each of the Contact
+	    *         data members
+	    */
+	 }
+	   
+	 
+	public String getFirst()
+	{
+		/**
+		 * Returns the first data member of the calling contact
+		 */
+	}
+
+	public String getLast()
+	{
+		/**
+		 * Returns the last data member of the calling contact
+		 */
+	}
+	
+	public String getStreet()
+	{
+		/**
+		 * Returns the street data member of the calling contact
+		 */
+	}
+	
+	public String getCity()
+	{
+		/**
+		 * Returns the city data member of the calling contact
+		 */
+	}
+	
+	public String getZip()
+	{
+		/**
+		 * Returns the zip data member of the calling contact
+		 */
+	}
+	
+	public String getState()
+	{
+		/**
+		 * Returns the state data member of the calling contact
+		 */
+	}
+	
+	public String getEmail()
+	{
+		/**
+		 * Returns the email data member of the calling contact
+		 */
+	}
+	
+	public String getPhone()
+	{
+		/**
+		 * Returns the phone data member of the calling contact
+		 */
+	}
+	
+	public String getNotes()
+	{
+		/**
+		 * Returns the notes data member of the calling contact
+		 */
+	}
+    
+    public String toString()
+    {
+        /**
+         *This method prints each data member of the calling Contact
+    }
+}
