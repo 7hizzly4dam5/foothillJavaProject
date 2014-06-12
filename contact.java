@@ -38,7 +38,7 @@ public class Contact
       scan.useDelimiter(System.getProperty("line.separator"));
       System.out.print("Email:");
       email = scan.next();
-      System.out.print("Street");
+      System.out.print("Street:");
       street = scan.next();
       System.out.print("City:");
       city = scan.next();
