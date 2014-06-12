@@ -31,24 +31,24 @@ public class Contact
    {
       Scanner scan = new Scanner(System.in);
 	    
-      System.out.print("First Name:");
+      System.out.print("First Name: ");
       first = scan.next();
-      System.out.print("Last Name:");
+      System.out.print("Last Name: ");
       last = scan.next();
       scan.useDelimiter(System.getProperty("line.separator"));
-      System.out.print("Email:");
+      System.out.print("Email: ");
       email = scan.next();
-      System.out.print("Street:");
+      System.out.print("Street: ");
       street = scan.next();
-      System.out.print("City:");
+      System.out.print("City: ");
       city = scan.next();
-      System.out.print("State:");
+      System.out.print("State: ");
       state = scan.next();
-      System.out.print("Zipcode:");
+      System.out.print("Zipcode: ");
       zip = scan.next();
-      System.out.print("Phone Number:");
+      System.out.print("Phone Number: ");
       phone = scan.next();
-      System.out.print("Notes:");
+      System.out.print("Notes: ");
       notes = scan.next(); 
    }
 	   
@@ -100,7 +100,7 @@ public class Contact
 	
    public String toString()
    {
-      return last + ", " + first + '\n' + street + '\n'+ city + ", " + state +
+      return '\n' + last + ", " + first + '\n' + street + '\n' + city + ", " + state +
       " " + zip + '\n' + email + '\n' + phone + '\n' + notes;
    }
 }
