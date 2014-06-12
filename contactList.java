@@ -1,17 +1,17 @@
+import java.util.ArrayList;
+
 public class ContactList
 {
    
-   private Contact[] list;  // this data member holds a contact array
-   private int count;  //this data member keeps track of how
-                                   //how full the list is.
+   private ArrayList<Contact> list;  // this data member holds a contact array
+  
    /**
     * Default constructor for ContactList.  Creates an array of Contacts that is
     * able to hold 40 Contacts
     */
    ContactList()
    {
-      list = new Contact[40];
-      count = 0;
+      list = new ArrayList<Contact>();
    }
    
    /**
@@ -29,8 +29,7 @@ public class ContactList
           * The Contact argument is added to the list at the location of count
           * , and then count moved to the next open spot
           */
-         list[count] = newPerson;   
-         count+=1;                            
+         list.add(newPerson);
       }
    }
    
@@ -40,9 +39,9 @@ public class ContactList
     */
    public void printList()
    {
-      for  (int i = 0; i < count; i++)
+      for  (int i = 0; i < list.size() ; i++)
       {
-         System.out.println(list[i].toString());
+         System.out.println(list.get(i).toString());
       }
       
    }
