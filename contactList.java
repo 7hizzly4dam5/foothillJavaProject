@@ -1,5 +1,6 @@
 public class ContactList
 {
+   
    private Contact[] list;  // this data member holds a contact array
    private int count;  //this data member keeps track of how
                                    //how full the list is.
@@ -18,14 +19,20 @@ public class ContactList
     */
    public void addContact(Contact newPerson)
    {
-      if (newPerson.last.isEmpty() == true || count ==40)
+      if (newPerson.getLast().isEmpty() == true)
       {
+         newPerson = null;
       }
       else
       {
-         list[count] = newPerson;   //The new contact is stored in the next
-         count+=1;                            //available spot of the array.
+         /**
+          * The Contact argument is added to the list at the location of count
+          * , and then count moved to the next open spot
+          */
+         list[count] = newPerson;   
+         count+=1;                            
       }
+   }
    
    /**
     * This method prints all of the contacts stored in the list by calling the
