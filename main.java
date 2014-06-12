@@ -1,27 +1,62 @@
-public class ContactProgram
+import java.util.Scanner;
+
+public class Main
 {
    public static void main(String[] args)
    {
-      ContactList listOne = new ContactList();
-      Contact personOne = new Contact();
+      //creates a new ContactList
+      ContactList contacts = new ContactList();
       
-      personOne.setFirstName("Albert");
-      personOne.setLastName("Einstein");
-      personOne.setEmail("eequalsmcsquared@physics.com");
-      personOne.setStreet("1955 Eighteen April St");
-      personOne.setState("New Jersey");
-      personOne.setCity("Princeton");
-      personOne.setZip("01905");
-      personOne.setPhone("0299792458");
-      personOne.setNotes("Above average intelligence");
+      int userInput;  //this int holds user's input
+      Scanner scan = new Scanner(System.in);
       
-      listOne.addContact(personOne);
-      listOne.printContactList();
-      listOne.findByLastName("Einstein");
-      listOne.findByEmail("eequalsmcsquared@physics.com");
-      listOne.findByZipCode("01905");
-      
-      System.out.println(personOne.toString());
-      System.out.println(listOne.toString());
+      /**
+       * This do-while loop displays the menu initially, and then continues to
+       * display the menu until the user selects 3 to quit
+       */
+      do  {
+         
+         System.out.println("Welcome to the QuickSoft Database.");
+         System.out.println("Menu:\n1 - Add Contact\n2 - Print list");
+         System.out.println("3 - Save and Exit");
+         
+         //user enters their menu choice
+         userInput = scan.nextInt();
+         
+      }  while (userInput !=3);
+      { 
+         switch (userInput)
+         {
+         case 1:  contacts.addContact();
+            break;
+         case 2: contacts.printList();
+            break;
+         default:  System.out.println("Error: INVALID ENTRY");
+            break;
+         }
+         
+         System.out.println("Welcome to the QuickSoft Database.");
+         System.out.println("Menu:\n1 - Add Contact\n2 - Print list");
+         System.out.println("3 - Save and Exit");
+         
+         userInput = scan.nextInt();
+      }
+   System.out.println("Thankyou for using QuickSoft");
    }
 }
+         
+      
+      
+      
+      
+      /**Contact personOne = new Contact();
+      personOne.read();
+      Contact personTwo = new Contact();
+      personTwo.read();
+      
+      System.out.println("Now the contact list prints");
+      ContactList contacts = new ContactList();
+      contacts.addContact(personOne);
+      contacts.addContact(personTwo);
+      contacts.printList();
+      */
