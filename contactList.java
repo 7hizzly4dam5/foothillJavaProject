@@ -1,58 +1,42 @@
-import java.util.ArrayList;
-/**
- * This class is a list of all Contact instances added to its ArrayList through its methods, and contains
- * methods for manipulating and providing the user output about this instance of ContactList.
- */
 public class ContactList
 {
-	private ArrayList<Contact> contactList = new ArrayList<Contact>();
-	
-	/**
-	 * This method adds the given contact to the arraylist.
-	 */
-	public void addContact(Contact contact)
-	{
-		;
-	}
-	
-	/** 
-	 * This method prints all contacts to the console.
-	 */
-	public void printContactList()
-	{
-		;
-	}
-	
-	/** 
-	 * This method finds and prints all contacts with a given last name.  Added by EP
-	 */
-	public void findByLastName(String last)
-	{
-		;
-	}
-	
-	/** 
-	 * This method finds and prints all contacts with a given e-mail address.  Added by EP
-	 */
-	public void findByEmail(String email)
-	{
-		;
-	}
-	
-	/** 
-	 * This method finds and prints all contacts with a given zipcode.
-	 */
-	public void findByZipCode(String zip)
-	{
-		;
-	}
-	
-	/**
-	* This method converts the member variables of ContactList into a string readable by
-	* the user as a list of all Contacts listed in this instance.
-	*/
-	public String toString()
-	{
-		;
-	}
+   private Contact[] list;  // this data member holds a contact array
+   private int count;  //this data member keeps track of how
+                                   //how full the list is.
+   /**
+    * Default constructor for ContactList.  Creates an array of Contacts that is
+    * able to hold 40 Contacts
+    */
+   ContactList()
+   {
+      list = new Contact[40];
+      count = 0;
+   }
+   
+   /**
+    * This method adds an object of type Contact to the list that calls it.
+    */
+   public void addContact(Contact newPerson)
+   {
+      if (newPerson.last.isEmpty() == true || count ==40)
+      {
+      }
+      else
+      {
+         list[count] = newPerson;   //The new contact is stored in the next
+         count+=1;                            //available spot of the array.
+      }
+   
+   /**
+    * This method prints all of the contacts stored in the list by calling the
+    * toString() method for that Contact object
+    */
+   public void printList()
+   {
+      for  (int i = 0; i < count; i++)
+      {
+         System.out.println(list[i].toString());
+      }
+      
+   }
 }
