@@ -3,36 +3,59 @@ public class TestCaseOne
    public static void main(String[] args)
    {
       
-      Contact personOne = new Contact();
-      personOne.read();
+      ContactList listOne = new ContactList();  // 1) declare a list of contacts
+      Contact personOne = new Contact();  // creates a new Person object
+      personOne.read();  // prompts user input for Contact's fields.
       
-      ContactList listOne = new ContactList();
-      listOne.addContact(personOne);
-      listOne.printList();
+      listOne.addContact(personOne);  // 2) add one contact to the list
+      listOne.printList();  // 3) print the list to show the contact  is on it
       
-      Contact personTwo = new Contact();
-      personTwo.read();
+      Contact personTwo = new Contact();  //creates another Contact
+      personTwo.read();  //prompts user input for Contact fields
       
-      listOne.addContact(personTwo);
-      listOne.printList();
+      listOne.addContact(personTwo);  // 4) add another contact to the list
+      listOne.printList();  // 5) print the list to show both contacts are on it
    }
 }
-      
-      /**
-      1) declare a list of contacts
 
-2) add one contact to the list
+/************************************TEST RUN**********************************
 
-3) print the list to show that the contact got into the list
+Toms-MacBook-Air-2:caseOneFinal Bleezy$ java TestCaseOne
+First Name:John
+Last Name:MacEnroe
+Email:jMac@gmail.com
+Street:123 Tennis Street
+City:San Jose
+State:CA
+Zipcode:90123
+Phone Number:(123) 456-7890
+Notes:This is a note 
+MacEnroe, John
+123 Tennis Street
+San Jose, CA 90123
+jMac@gmail.com
+(123) 456-7890
+This is a note
+First Name:Mary
+Last Name:Lamb
+Email:maryHasLambs@gmail.com
+Street:456 Sheppard Street
+City:Dover
+State:Rhode Island
+Zipcode:12345
+Phone Number:(987) 654-3210
+Notes:This is the second note
+MacEnroe, John
+123 Tennis Street
+San Jose, CA 90123
+jMac@gmail.com
+(123) 456-7890
+This is a note
+Lamb, Mary
+456 Sheppard Street
+Dover, Rhode Island 12345
+maryHasLambs@gmail.com
+(987) 654-3210
+This is the second note
 
-4) add another contact to the list
-
-5) print the list to show that both contacts got into the list
-
-If your main() does more than just these 5 steps, 
-then you are on the wrong track.
-
-As you code this first use case, be careful not to change the design that your director approved in Task 2.
-At this point you may need to add additional methods or functions, but you should not add any new 
-variables (unless your director asked you to add a new variable in your feedback from Task 2.)
-*/
+*****************************************************************/
