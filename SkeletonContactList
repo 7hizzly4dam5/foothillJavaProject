@@ -1,0 +1,62 @@
+import java.util.*;
+
+public class ContactList
+{
+	
+	private Contact[] list; //this list holds Contact objects
+    private int count; // this integer keeps track of the next open spot
+                       // on the Contact
+    
+    ContactList()
+    {
+        /**
+         * Default Constructor.  Creates a list of a certain size
+         */
+    }
+	
+	public void addContact(Contact newPerson))
+	{
+		/** 
+         * This method creates a contact and adds it to the list of contacts
+         * Parameters: Contact (newly created in main)
+         * Actions: Adds the contact to the contact list.
+         */
+	}
+	
+	public void printContactList()
+	{
+		/**
+         * This method prints all contacts to the console.
+         */
+	}
+    
+    public void lastAccess(string newLast)
+    {
+        /**
+         * This method searches through the list and prints any Contacs that
+         * have a matchin last name.
+         * Parameters: String (user input last name)
+         * Action: Search through list for matches, print all matches.
+         */
+    }
+    
+    public void email Access(string newMail)
+    {
+        /**
+         * This method searches through the list and prints any Contacs that
+         * have a matchin email.
+         * Parameters: String (user input email address)
+         * Action: Search through list for matches, print all matches.
+         */
+    }
+    
+    public void zipAccess(string newZip)
+    {
+        /**
+         * This method searches through the list and prints all of the
+         * contacts that live in that zip code
+         * Parameters: lastName string
+         * Action: Search through list for matching zips, prints all matches.
+         */
+    }
+}
