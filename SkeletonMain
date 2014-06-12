@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class Main
+{	
+	public static void main(String[] args)
+	{
+		/**
+         * Main will test the useCases described on the QualitySoft website
+         */
+        
+	}
+	
