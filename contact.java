@@ -1,169 +1,107 @@
-/** 
- * A representation of a contact with fields for each piece of information and getters/setters for each field.
- * 
- */
+import java.util.Scanner;
+
 public class Contact
 {
-	private String firstName;
-	private String lastName;
-	private String street;
-	private String city;
-	private String zip;
-	private String state;
-	private String email;
-	private String phone;
-	private String notes;
+ 
+   private String first;
+   private String last;
+   private String street;  
+   private String city;  
+   private String zip;
+   private String state;
+   private String email;
+   private String phone;
+   private String notes; 
+   
+   
+   Contact()
+   {
+      first = "default";
+      last = "default";
+      email = "default";
+      phone = "default";
+      street = "default";
+      city = "default";
+      state = "default";
+      zip = "default";
+      notes = "default";
+   }
+   
+   public void read()
+   {
+      Scanner scan = new Scanner(System.in);
+	    
+      System.out.print("First Name:");
+      first = scan.next();
+      System.out.print("Last Name:");
+      last = scan.next();
+      scan.useDelimiter(System.getProperty("line.separator"));
+      System.out.print("Email:");
+      email = scan.next();
+      System.out.print("Street");
+      street = scan.next();
+      System.out.print("City:");
+      city = scan.next();
+      System.out.print("State:");
+      state = scan.next();
+      System.out.print("Zipcode:");
+      zip = scan.next();
+      System.out.print("Phone Number:");
+      phone = scan.next();
+      System.out.print("Notes:");
+      notes = scan.next(); 
+   }
+	   
+	 
+   public String getFirst()
+   {
+      return first;
+   }
+   
+   public String getLast()
+   {
+      return last;
+   }
 	
-	/**
-	* Returns the variable firstName
-	*/
-	public String getFirstName()
-	{
-		return firstName;
-	}
+   public String getStreet()
+   {
+      return street;
+   }
 	
-	/**
-	* Sets the variable firstName
-	*/
-	public void setFirstName(String newFirstName)
-	{
-		firstName = newFirstName;
-	}
+   public String getCity()
+   {
+      return city;
+   }
+   
+   public String getZip()
+   {
+      return zip;
+   }
+   
+   public String getState()
+   {
+      return state;
+   }
+   
+   public String getEmail()
+   {
+      return email;
+   }
 	
-	/**
-	* Returns the variable lastName
-	*/
-	public String getLastName()
-	{
-		return lastName;
-	}
+   public String getPhone()
+   {
+      return phone;
+   }
 	
-	/**
-	* Sets the variable lastName
-	*/
-	public void setLastName(String newLastName)
-	{
-		lastName = newLastName;
-	}
+   public String getNotes()
+   {
+      return notes;
+   }
 	
-	/**
-	* Returns the variable street
-	*/
-	public String getStreet()
-	{
-		return street;
-	}
-	
-	/**
-	* Sets the variable street
-	*/
-	public void setStreet(String newStreet)
-	{
-		street = newStreet;
-	}
-	
-	/**
-	* Returns the variable city
-	*/
-	public String getCity()
-	{
-		return city;
-	}
-	
-	/**
-	* Sets the variable city
-	*/
-	public void setCity(String newCity)
-	{
-		city = newCity;
-	}
-	
-	/**
-	* Returns the variable zip
-	*/
-	public String getZip()
-	{
-		return zip;
-	}
-	
-	/**
-	* Sets the variable zip
-	*/
-	public void setZip(String newZip)
-	{
-		zip = newZip;
-	}
-	
-	/**
-	* Returns the variable state
-	*/
-	public String getState()
-	{
-		return state;
-	}
-	
-	/**
-	* Sets the variable state
-	*/
-	public void setState(String newState)
-	{
-		state = newState;
-	}
-	
-	/**
-	* Returns the variable email
-	*/
-	public String getEmail()
-	{
-		return email;
-	}
-	
-	/**
-	* Sets the variable email
-	*/
-	public void setEmail(String newEmail)   //added by EP
-	{
-		email = newEmail;
-	}
-	
-	/**
-	* Returns the variable phone
-	*/
-	public String getPhone()
-	{
-		return phone;
-	}
-	
-	/**
-	* Sets the variable phone
-	*/
-	public void setPhone(String newPhone)
-	{
-		phone = newPhone;
-	}
-	
-	/**
-	* Returns the variable notes
-	*/
-	public String getNotes()
-	{
-		return notes;
-	}
-	
-	/**
-	* Sets the variable notes
-	*/
-	public void setNotes(String newNotes)
-	{
-		notes = newNotes;
-	}
-	
-	/**
-	* Converts the instance of Contact into a string readable by the user as a summary of information about
-	* the specific contact.
-	*/
-	public String toString()
-	{
-		;
-	}
+   public String toString()
+   {
+      return last + ", " + first + '\n' + street + '\n'+ city + ", " + state +
+      " " + zip + '\n' + email + '\n' + phone + '\n' + notes;
+   }
 }
+	
