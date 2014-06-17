@@ -31,13 +31,13 @@ public class Contact //TB, OC, EP, AB
       notes = "default";
    }
       private boolean hasValidEmail() {
-	   return email.contains("@") && email.contains(".");
+	   return (email.contains("@") && email.contains(".")) || email.length() == 0;
       }	   
       private boolean hasValidZip(){
-	   return zip.length() == 5;
+	   return zip.length() == 5 || zip.length() == 0;
       }
       private boolean hasValidPhone(){
-	   return phone.length() == 10;
+	   return phone.length() == 10 || phone.lenght == 0;
       }
       public void read()
    {
