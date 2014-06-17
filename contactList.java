@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ContactList
+public class ContactList //TB, OC
 {
    
    private ArrayList<Contact> list;  // this data member holds a contact array
