@@ -1,3 +1,7 @@
+/**
+ * A representation of a contact with fields for each piece of information.
+ * 
+ */
 import java.util.Scanner;
 
 public class Contact //TB, OC, EP, AB
@@ -26,8 +30,16 @@ public class Contact //TB, OC, EP, AB
       zip = "default";
       notes = "default";
    }
-   
-   public void read()
+      private boolean hasValidEmail() {
+	   return email.contains("@") && email.contains(".");
+      }	   
+      private boolean hasValidZip(){
+	   return zip.length() == 5;
+      }
+      private boolean hasValidPhone(){
+	   return phone.length() == 10;
+      }
+      public void read()
    {
       Scanner scan = new Scanner(System.in);
 	    
@@ -36,18 +48,33 @@ public class Contact //TB, OC, EP, AB
       System.out.print("Last Name: ");
       last = scan.next();
       scan.useDelimiter(System.getProperty("line.separator"));
-      System.out.print("Email: ");
-      email = scan.next();
+      do {//EP
+	      System.out.print("Email: ");
+	      email = scan.next();
+	      if (hasValidEmail() == false) {
+	    	  System.out.println("Invalid email. Please try again.");
+	      }
+      } while (hasValidEmail() == false);
       System.out.print("Street: ");
       street = scan.next();
       System.out.print("City: ");
       city = scan.next();
       System.out.print("State: ");
       state = scan.next();
-      System.out.print("Zipcode: ");
-      zip = scan.next();
-      System.out.print("Phone Number: ");
-      phone = scan.next();
+      do {//EP
+    	  System.out.print("Zipcode: ");
+    	  zip = scan.next();
+    	  if (hasValidZip() == false) {
+    		  System.out.println("Invalid zipcode. Please try again.");
+    	  }
+      } while(hasValidZip() == false);
+      do{//EP
+    	  System.out.print("Phone Number: ");
+    	  phone = scan.next();
+    	  if (hasValidPhone() == false){
+    		  System.out.println("Invalid phone. Please try again.");
+    	  }
+      } while (hasValidPhone() == false);
       System.out.print("Notes: ");
       notes = scan.next(); 
    }
