@@ -1,3 +1,6 @@
+/**
+ * Creats an arraylist to store new contacts.
+ */
 import java.util.ArrayList;
 
 public class ContactList //TB, OC
@@ -6,8 +9,7 @@ public class ContactList //TB, OC
    private ArrayList<Contact> list;  // this data member holds a contact array
   
    /**
-    * Default constructor for ContactList.  Creates an array of Contacts that is
-    * able to hold 40 Contacts
+    * Default constructor for ContactList.  Creates an arraylist of Contacts.
     */
    ContactList()
    {
