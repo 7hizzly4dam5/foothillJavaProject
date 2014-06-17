@@ -1,3 +1,7 @@
+/**
+ * This class creates a list of contacts and individual objects of contact.  
+ * It then prints the list of contacts after each entry.
+ */
 public class TestCaseOne
 {
    public static void main(String[] args) //TB
