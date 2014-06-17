@@ -1,5 +1,5 @@
 /**
- * A representation of a contact with fields for each piece of information.
+ * Creates a contact with fields for each piece of information.
  * 
  */
 import java.util.Scanner;
