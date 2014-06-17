@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Contact
+public class Contact //TB, OC, EP, AB
 {
  
    private String first;
