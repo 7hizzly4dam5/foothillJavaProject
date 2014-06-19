@@ -2,23 +2,44 @@
  * This class creates a list of contacts and individual objects of contact.  
  * It then prints the list of contacts after each entry.
  */
+import java.util.Scanner;
+import java.io.*;
+
 public class TestCaseOne
 {
-   public static void main(String[] args) //TB
+   public static void main(String[] args) throws java.io.IOException
+   , java.lang.ClassNotFoundException
    {
-      
-      ContactList listOne = new ContactList();  // 1) declare a list of contacts
-      Contact personOne = new Contact();  // creates a new Person object
-      personOne.read();  // prompts user input for Contact's fields.
-      
-      listOne.addContact(personOne);  // 2) add one contact to the list
-      listOne.printList();  // 3) print the list to show the contact  is on it
-      
-      Contact personTwo = new Contact();  //creates another Contact
-      personTwo.read();  //prompts user input for Contact fields
-      
-      listOne.addContact(personTwo);  // 4) add another contact to the list
-      listOne.printList();  // 5) print the list to show both contacts are on it
+      Boolean sentinel;
+         
+      do
+      {
+         sentinel = false;
+         Scanner scan = new Scanner(System.in);
+         System.out.println("1-Add Contact\n2-Print List\n3- Last Search" + '\n'
+                            +"4-Email Search\n5- Zip Search\n6- Save & Quit");
+         int userIn = scan.nextInt();
+         
+         
+         switch(userIn) {
+            case 1: Contact contact = new Contact();
+               contact.read();
+               listOne.addContact(contact);
+               sentinel = true;
+               break;
+            case 2: listOne.printList(); sentinel = true;
+               break;
+            case 3: listOne.lastAccess(); sentinel = true;
+               break;
+            case 4: listOne.emailAccess(); sentinel = true;
+               break;
+            case 5: listOne.zipAccess(); sentinel = true;
+               break;
+            case 6: sentinel = false;
+               break;
+         }
+      }
+      while(sentinel);
    }
 }
 
