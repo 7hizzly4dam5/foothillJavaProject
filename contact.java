@@ -127,8 +127,8 @@ public class Contact //TB, OC, EP, AB
 	
    public String toString()
    {
-      return '\n' + last + ", " + first + '\n' + street + '\n' + city + ", " + state +
-      " " + zip + '\n' + email + '\n' + phone + '\n' + notes;
+      return '\n' + "Name:"+  last + ", " + first + '\n' + "address" + street + '\n' + "City and State:"+ city + ", " + state +
+      " " + "zip:"+ zip + '\n' + "email:"+ email + '\n' + "phone" + phone + '\n' + "notes:"+ notes;
    }
 }
 	
