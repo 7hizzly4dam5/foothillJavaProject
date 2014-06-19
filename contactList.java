@@ -65,17 +65,16 @@ public class ContactList //TB, OC
       }
    }
    
-    /**
+   /**
     * This method prints all of the contacts stored in the list by calling the
     * toString() method for that Contact object
     */
    public void printList()
    {
-      for  (int i = 0; i < list.size() ; i++)
+      for  (int i = 0; i < count; i++)
       {
-         System.out.println(list.get(i).toString());
-      }
-      
+         System.out.println(list[i].toString());
+      } 
    }
    
     public void lastAccess()
