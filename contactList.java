@@ -35,7 +35,19 @@ public class ContactList //TB, OC
       }
    }
    
-   /**
+
+    
+   public void searchByLastName()
+   {
+      System.out.println("Please enter last name of person you are searching for")
+      String search = scanner.nextLine();
+      for int i = 0; i < list.length(); i++) 
+      {
+         if (search == list[i].getLast())
+         System.out.println(list[i])
+      }
+   }
+    /**
     * This method prints all of the contacts stored in the list by calling the
     * toString() method for that Contact object
     */
