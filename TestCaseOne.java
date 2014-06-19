@@ -10,17 +10,22 @@ public class TestCaseOne
    public static void main(String[] args) throws java.io.IOException
    , java.lang.ClassNotFoundException
    {
-      Boolean sentinel;
+      Boolean sentinel;  //boolean to determine if the loop should run again
          
       do
       {
-         sentinel = false;
+         sentinel = false; //while the boolean is false the loop runs
+         
          Scanner scan = new Scanner(System.in);
+         
+         //Prints a menu of choices that correspond to the switch cases
          System.out.println("1-Add Contact\n2-Print List\n3- Last Search" + '\n'
                             +"4-Email Search\n5- Zip Search\n6- Save & Quit");
+         
+         //int variable that is the key to the switch case.  user inputs a number
          int userIn = scan.nextInt();
          
-         
+         //switch statement to control the menu operations
          switch(userIn) {
             case 1: Contact contact = new Contact();
                contact.read();
