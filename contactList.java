@@ -23,7 +23,7 @@ public class ContactList //TB, OC
    /**
     * Default constructor for ContactList.  Creates an arraylist of Contacts.
     */
-   ContactList()
+   ContactList() //TB
    {
       list = new Contact[CONTACT_TOTAL];
       lMatch = new Contact[CONTACT_TOTAL];
@@ -77,7 +77,7 @@ public class ContactList //TB, OC
       } 
    }
    
-    public void lastAccess()
+    public void lastAccess() //TB
    {
       System.out.println("\nEnter a last name address to search:");
       
