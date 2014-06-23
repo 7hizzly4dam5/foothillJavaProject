@@ -1,0 +1,86 @@
+import java.io.*;
+
+class ContactListStorage
+{
+   private String fileName;   //name of the file to store the ContactList object
+   
+   public ContactListStorage(String fileName)
+   {
+      setFile(fileName);
+   }
+   
+   public void setFile(String fileName)
+   {
+      this.fileName = fileName;
+      System.out.println("Inside setFile, fileName is " + fileName);
+   }
+   
+   /**
+    * Send Contact[] list from ContactList
+    */
+   public void writeList(int count , Contact[] list) throws IOException 
+   {
+      
+      File outFile = new File(fileName);
+      FileOutputStream outFileStream = new FileOutputStream(outFile);
+      ObjectOutputStream oos = new ObjectOutputStream(outFileStream);
+      
+      oos.writeInt(count);
+      oos.writeObject(list);
+      
+      oos.close();
+} 
+
+public Contact[] reader() throws IOException
+{
+   Contact [] list;
+   int count;
+   
+   File inFile = new File(fileName);
+   FileInputStream inFileStream = new FileInputStream(inFile);
+   ObjectInputStream ois = new ObjectInputStream(inFileStream);
+   
+   try{
+      //read Contacts from the file
+      count = (int) ois.readInt();
+      list = (Contact[]) ois.readObject();
+   }
+   catch (ClassNotFoundException e)
+   {
+      list = null;
+      System.out.println("Error: Contact class not found");
+   }
+   
+   ois.close();
+   
+   return list;
+}
+public int readerInt() throws IOException
+{
+   Contact[] list;
+   int count;
+   
+   File inFile = new File(fileName);
+   FileInputStream inFileStream = new FileInputStream(inFile);
+   ObjectInputStream ois = new ObjectInputStream(inFileStream);
+   
+   try {
+      
+      //read Contacts from the file
+      count = ois.readInt();
+      list = (Contact[]) ois.readObject();
+   }
+   catch (ClassNotFoundException e)
+   {
+      count = 0;
+      list = null;
+      System.out.println("Error: Contact class not found");
+   }
+   
+   ois.close();
+   
+   return count;
+}
+}
+   
+   
