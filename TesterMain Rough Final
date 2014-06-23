@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class TestCaseOne
+{
+   public static void main(String[] args) throws java.io.IOException
+   , java.lang.ClassNotFoundException
+   {
+      Boolean sentinel;
+      ContactList listOne = new ContactList();
+      listOne.readList("trialTwo.dat");
+      
+      do
+      {
+         
+         sentinel = false;
+         Scanner scan = new Scanner(System.in);
+         System.out.println("\n\n1-Add Contact\n2-Print List\n3- Last Search" + '\n'
+                            +"4-Email Search\n5- Zip Search\n6- Save & Quit");
+         int userIn = scan.nextInt();
+         
+         
+         switch(userIn) {
+            case 1: Contact contact = new Contact();
+               contact.read();
+               listOne.addContact(contact);
+               sentinel = true;
+               break;
+            case 2: listOne.printList(); sentinel = true;
+               break;
+            case 3: listOne.lastAccess(); sentinel = true;
+               break;
+            case 4: listOne.emailAccess(); sentinel = true;
+               break;
+            case 5: listOne.zipAccess(); sentinel = true;
+               break;
+            case 6: listOne.saveFile("trialOne.dat"); sentinel = false;
+               break;
+         }
+      }
+      while(sentinel);
+   }
+}
