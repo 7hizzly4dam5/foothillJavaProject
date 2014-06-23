@@ -1,0 +1,213 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class ContactList implements Serializable
+{
+   
+   Scanner scan =new Scanner(System.in);
+   
+   private final int CONTACT_TOTAL = 20;
+   
+   private Contact[] list;  
+   private int count;  
+                                   
+                                   
+   private Contact[] lMatch;
+   private int lcount;
+   
+   private Contact[] eMatch;
+   private int ecount;
+   
+   private Contact[] zMatch;
+   private int zcount;
+   
+   ContactListStorage fileManager;
+   
+   /**
+    * Default constructor for ContactList.  Creates an array of Contacts that is
+    * able to hold 40 Contacts
+    */
+   ContactList()
+   {
+      list = new Contact[CONTACT_TOTAL];
+      lMatch = new Contact[CONTACT_TOTAL];
+      eMatch = new Contact[CONTACT_TOTAL];
+      zMatch = new Contact[CONTACT_TOTAL];
+      count = 0;
+      lcount = 0;
+      ecount = 0;
+      zcount = 0;
+   }
+   
+   /**
+    * This method adds an object of type Contact to the list that calls it.
+    */
+   public void addContact(Contact newPerson)
+   {
+      
+      String tempFirst = newPerson[i].getFirst();
+      String tempLast = newPerson.getLast();
+            /**
+             * The Contact argument is added to the list at the location of count
+             * , and then count moved to the next open spot
+             */
+             if( count == CONTACT_TOTAL)
+             {
+                System.out.println("Unable to add Contact; list is full");
+             }
+             else if (tempLast.isEmpty())
+             {
+                System.out.println("Unable to add contact; no last name");
+             }
+             else if (tempFirst.isEmpty())
+             {
+                System.out.println("UNable to add contact: no first name");
+             else 
+             {
+            list[count] = newPerson;   
+            count+=1;
+             }
+   }
+   
+   public int getCount()
+   {
+      return count;
+   }
+   
+   public Contact[] getList()
+   {
+      return list;
+   }
+   
+   /**
+    * This method prints all of the contacts stored in the list by calling the
+    * toString() method for that Contact object
+    */
+   public void printList()
+   {
+      for  (int i = 0; i < count ; i++)
+      {
+         System.out.println(list[i].toString());
+      } 
+   }
+   
+   public void lastAccess()
+   {
+      System.out.println("\nEnter a last name address to search:");
+      //creates Scanner object to accept input, assigns to String search
+      Scanner scan = new Scanner(System.in);
+      String search;
+      search = new String(scan.next());
+      
+      //adds all matching las names to the lMatch contact array
+      for (int i = 0; i < count; i++)
+      {
+         String lastCheck;
+         lastCheck = list[i].getLast();  //current last name is the contactsearc
+         
+         if (search.equals(lastCheck))
+         {
+            lMatch[lcount] = list[i];
+            lcount+=1;
+         }
+      }
+      
+      //print all of the contacts with matching last names
+      for (int i = 0; i < lcount; i++)
+      {
+         System.out.println(lMatch[i].toString());
+      }
+   }
+   
+   public void emailAccess()
+   {
+      
+      System.out.println("\nEnter an email address to search:");
+      //creates Scanner object to accept input, assigns to String search
+      Scanner scan = new Scanner(System.in);
+      String search;
+      search = new String(scan.next());
+      
+      //adds all matching las names to the lMatch contact array
+      for (int i = 0; i < count; i++)
+      {
+         String emailCheck;
+         emailCheck = list[i].getEmail();  //current last name is the contactsearc
+         
+         if (search.equals(emailCheck))
+         {
+            eMatch[ecount] = list[i];
+            ecount+=1;
+         }
+      }
+      
+      //print all of the contacts with matching last names
+      for (int i = 0; i < ecount; i++)
+      {
+         System.out.println(eMatch[i].toString());
+      }
+   }
+   
+   public void zipAccess()
+   {
+      System.out.println("\nEnter a Zipcode to search:");
+      //creates Scanner object to accept input, assigns to String search
+      Scanner scan = new Scanner(System.in);
+      String search;
+      search = new String(scan.next());
+      
+      //adds all matching las names to the lMatch contact array
+      for (int i = 0; i < count; i++)
+      {
+         String zipCheck;
+         zipCheck = list[i].getZip();  //current last name is the contactsearc
+         
+         if (search.equals(zipCheck))
+         {
+            zMatch[zcount] = list[i];
+            zcount+=1;
+         }
+      }
+      
+      //print all of the contacts with matching last names
+      
+      for (int i = 0; i < zcount; i++)
+      {
+         System.out.println(zMatch[i].toString());
+      }
+   }
+   
+   /**
+    * This method sends takes a fileName argument, and sends a Contact[] to the
+    * writeList method of ContactListStorage
+    */
+   public void saveFile(String fileName) throws IOException
+   {
+     fileManager = new ContactListStorage(fileName);
+     
+     try {
+        fileManager.writeList(count , list);
+     }
+     catch (IOException e) {
+        System.out.println("Error: IOException is thrown.");
+     }
+   }
+   
+   /**
+    * This method takes a fileName as a parameter, and returns a list that is
+    * of Contacts that is stored in the list member of ContactList
+    */
+   public void readList(String fileName)
+   {
+      fileManager = new ContactListStorage(fileName);
+      
+      try {
+         count = fileManager.readerInt();
+         list = fileManager.reader();
+         System.out.println("The size of the list is " + count);
+      }
+      catch (IOException e)  {
+         System.out.println("Error: IOException is thrown.");
+      }
+   }
+}
