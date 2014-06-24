@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class ContactList implements Serializable
+public class ContactList implements Serializable  //TB
 {
    
    Scanner scan =new Scanner(System.in);
@@ -27,7 +27,7 @@ public class ContactList implements Serializable
     * Default constructor for ContactList.  Creates an array of Contacts that is
     * able to hold 40 Contacts
     */
-   ContactList()
+   ContactList()  //TB
    {
       list = new Contact[CONTACT_TOTAL];
       lMatch = new Contact[CONTACT_TOTAL];
@@ -83,15 +83,15 @@ public class ContactList implements Serializable
     * This method prints all of the contacts stored in the list by calling the
     * toString() method for that Contact object
     */
-   public void printList()
+   public void printList() //TB
    {
       for  (int i = 0; i < count ; i++)
       {
          System.out.println(list[i].toString());
       } 
    }
-   
-   public void lastAccess()
+
+   public void lastAccess()  //TB
    {
       System.out.println("\nEnter a last name address to search:");
       //creates Scanner object to accept input, assigns to String search
@@ -119,7 +119,7 @@ public class ContactList implements Serializable
       }
    }
    
-   public void emailAccess()
+   public void emailAccess()  //TB
    {
       
       System.out.println("\nEnter an email address to search:");
@@ -148,7 +148,7 @@ public class ContactList implements Serializable
       }
    }
    
-   public void zipAccess()
+   public void zipAccess() //TB
    {
       System.out.println("\nEnter a Zipcode to search:");
       //creates Scanner object to accept input, assigns to String search
@@ -197,14 +197,13 @@ public class ContactList implements Serializable
     * This method takes a fileName as a parameter, and returns a list that is
     * of Contacts that is stored in the list member of ContactList
     */
-   public void readList(String fileName)
+   public void readList(String fileName)  //TB
    {
       fileManager = new ContactListStorage(fileName);
       
       try {
          count = fileManager.readerInt();
          list = fileManager.reader();
-         System.out.println("The size of the list is " + count);
       }
       catch (IOException e)  {
          System.out.println("Error: IOException is thrown.");
